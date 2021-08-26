@@ -6,3 +6,5 @@
  
 `gcc -S $CFILE -o ${CFILE::-1}s` --> command to compile C file to generate the assembly code without assembling
  
+`gcc $CFILE -o cisfun` --> command to compile C file to create an executable called cisfun
+ 
