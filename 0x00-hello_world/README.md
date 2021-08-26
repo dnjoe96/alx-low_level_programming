@@ -8,3 +8,5 @@
  
 `gcc $CFILE -o cisfun` --> command to compile C file to create an executable called cisfun
  
+`gcc -S -masm=intel $CFILE -o ${CFILE::-1}s` --> cimpile to assembly, intel
+ 
