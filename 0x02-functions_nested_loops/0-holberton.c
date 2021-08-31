@@ -1,24 +1,19 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * holberton - prints holberton
- *
- * Return: 0
- */
-int holberton(void)
-{
-	printf("Holberton\n");
-	return (0);
-}
-
-/**
- * main - Entry point of program
+ * main - prints holberton
  *
  * Return: 0
  */
 int main(void)
 {
-	holberton();
+	char name[] = "_putchar";
+	int i;
+
+	for (i = 0; i <= 8; i++)
+	{
+		_putchar(name[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
