@@ -5,15 +5,30 @@
 #include <stdlib.h>
 
 
-int main() {
-        int abs;
-        int num = -15;
+int main(void) {
+        int a, b, c, d;
 
-        if (num >= 0) {
-                abs = num;
-                printf("%d\n", abs);
-        } else {
-                abs = num * -1;
-                printf("%d\n", abs);
+        for (a = 0; a <= 2; a++) {
+                
+                for (b = 0; b <= 9; b++){
+                    
+                    if (a == 2 && b == 4) {
+                        return (0);
+                    }
+                    
+                    for (c = 0; c <= 5; c++) {
+                        
+                        for (d = 0; d <= 9; d++) {
+                            putchar('0' + a);
+                            putchar('0' + b);
+                            putchar(':');
+                            putchar('0' + c);
+                            putchar('0' + d);
+                            putchar('\n');    
+                        }
+                    }
+                        
+                }
+
         }
 }
