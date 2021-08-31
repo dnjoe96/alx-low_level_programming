@@ -10,14 +10,14 @@ int _abs(int n)
 {
 	int abs;
 
-	if (num >= 0)
+	if (n >= 0)
 	{
-		abs = num;
+		abs = n;
 		return (abs);
 	}
 	else
 	{
-		abs = num * -1;
+		abs = n * -1;
 		return (abs);
 	}
 }
