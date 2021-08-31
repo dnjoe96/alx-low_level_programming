@@ -1,12 +1,26 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point of program
+ * print_sign - checks for signs
+ * @n: the input to be checked to be checked
  *
- * Return: 0
+ * Return: 1 if +, 0 if sign is 0, and -1 if sign is negative
  */
-int main(void)
+int print_sign(int n)
 {
-	printf("Holberton\n");
-	return (0);
+	if (n > 0)
+	{
+		_putchar('+');
+		return (1);
+	}
+	else if (n < 0)
+	{
+		_putchar('-');
+		return (-1);
+	}
+	else
+	{
+		_puchar('0');
+		return (0);
+	}
 }
