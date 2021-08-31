@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of program
+ * add - add two numbers
+ * @n: number1
+ * @m: number2
  *
- * Return: 0
+ * Return: sum of n and m
  */
-int main(void)
+int add(int n, int m)
 {
-	printf("Holberton\n");
-	return (0);
+	return (n + m);
 }
