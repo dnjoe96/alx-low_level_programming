@@ -1,12 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point of program
+ * _islower - checks for lower case
+ * @c: the alphabet to be checked
  *
- * Return: 0
+ * Return: 1 if lower and 0 otherwise
  */
-int main(void)
+int _islower(int c)
 {
-	printf("Holberton\n");
-	return (0);
+	if (c >= 97 && c <= 122)
+		return (1);
+	else if (c >= 65 && c <= 90)
+		return (0);
+	else
+		return (0);
 }
