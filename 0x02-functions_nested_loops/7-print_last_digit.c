@@ -1,12 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point of program
+ * print_last_digit - print the last digit of a number
+ * @n: the input to be checked
  *
- * Return: 0
+ * Return: absolute value
  */
-int main(void)
+int print_last_digit(int n)
 {
-	printf("Holberton\n");
-	return (0);
+	int last;
+
+	last = n % 10;
+
+	_putchar('0' + last);
+	return (last);
 }
