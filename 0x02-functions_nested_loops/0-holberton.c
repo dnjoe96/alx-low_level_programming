@@ -1,5 +1,17 @@
 #include <stdio.h>
 #include "main.h"
+
+/**
+ * holberton - prints holberton
+ *
+ * Return: 0
+ */
+int holberton(void)
+{
+	printf("Holberton\n");
+	return (0);
+}
+
 /**
  * main - Entry point of program
  *
@@ -7,6 +19,6 @@
  */
 int main(void)
 {
-	printf("Holberton\n");
+	holberton();
 	return (0);
 }
