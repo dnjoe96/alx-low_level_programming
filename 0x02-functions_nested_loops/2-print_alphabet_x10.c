@@ -1,12 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point of program
+ * print_alphabet_x10 - print all alphabets ten times
  *
- * Return: 0
+ * Return: Nothing
  */
-int main(void)
+void print_alphabet_x10(void)
 {
-	printf("Holberton\n");
-	return (0);
+	int i, j;
+
+	for (i = 0; i < 10; i++)
+	{
+		for (j = 0; j < 26; j++)
+		{
+			_putchar(97 + j);
+		}
+		_putchar('\n');
+	}
 }
