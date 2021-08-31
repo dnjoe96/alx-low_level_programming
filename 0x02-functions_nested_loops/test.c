@@ -6,25 +6,14 @@
 
 
 int main() {
-    
-    char nu = '"';
-//      printf("%c\n", c);
-        // int nu = (int) c;
-        printf("%d\n", nu);
-    if (nu >= 97 && nu <= 122) {
-            printf("Lower");
-        //     return (1);
-    }
-                
-    else if (nu >= 65 && nu <= 90)
-                {
-                        printf("upper");
-                        // return (0);
-                }
-                
-    else {
-                printf("Upper");
-                // return (0);
-    }
-                
+        int abs;
+        int num = -15;
+
+        if (num >= 0) {
+                abs = num;
+                printf("%d\n", abs);
+        } else {
+                abs = num * -1;
+                printf("%d\n", abs);
+        }
 }
