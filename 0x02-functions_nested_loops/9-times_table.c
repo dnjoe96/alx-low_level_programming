@@ -7,11 +7,12 @@
  */
 void times_table(void)
 {
-	int p, i, j, n;
+	int p, i, j;
+	int n, m;
 
 	for (n = 0; n <= 9; n++)
 	{
-		for (int m = 0; m <= 9; m++)
+		for (m = 0; m <= 9; m++)
 		{
 			p = n * m;
 
