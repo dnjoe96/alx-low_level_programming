@@ -8,28 +8,34 @@
  */
 void print_to_98(int n)
 {
-	int a, i, j;
+	int a;
 
-	for (a = n; a <= 98; a++)
+	if (n <= 98)
 	{
-		if (a > 9)
+		for (a = n; a <= 98; a++)
 		{
-			i = a / 10;
-			j = a % 10;
-
-			_putchar('0' + i);
-			_putchar('0' + j);
+			if (a != 98)
+			{
+				printf("%d, ", a);
+			}
+			else
+			{
+				printf("%d\n");
+			}
 		}
-		else
+	}
+	else
+	{
+		for (a = n; a >= 98; a--)
 		{
-			i = a;
-			_putchar('0' + i);
-		}
-
-		if (i != 9 || j != 8)
-		{
-			_putchar(',');
-			_putchar(' ');
+			if (a != 98)
+			{
+				printf("%d, ", a);
+			}
+			else
+			{
+				printf("%d\n");
+			}
 		}
 	}
 }
