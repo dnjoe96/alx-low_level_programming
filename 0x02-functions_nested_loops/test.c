@@ -2,30 +2,40 @@
 // code.
 
 #include <stdio.h>
-#include <stdlib.h>
+// #include <stdlib.h>
 
 
 int main(void) {
-        int n = 2;
-        int i, j;
-
-        for (int a = n; a <= 98; a++) {
-            
-            if (a > 9) {
-                i = a / 10;
-                j = a % 10;
-                
-                putchar('0' + i);
-                putchar('0' + j);
-            } else{
-                i = a;
-                putchar('0' + i);
-            }
-            
-            if (i != 9 || j != 8)
+        
+        int p, i, j;
+        
+        for (int n = 0; n <= 9; n++)
+        {
+            for (int m = 0; m <= 9; m++)
             {
-            putchar(',');
-            putchar(' ');
-            }   
+                p = n * m;
+                
+                if (p > 9)
+                {
+                    i = p / 10;
+                    j = p % 10;
+                    
+                    putchar('0' + i);
+                    putchar('0' + j);
+                }
+                else
+                {
+                    putchar('0' + p);
+                }
+                
+                if ((p != 81 && m != 9)|| (n > 0 && m >= 5))
+                {
+                    putchar(',');
+                    putchar(' ');
+                    if (p <= 9)
+                        putchar(' ');
+                }
+            }
+            putchar('\n');
         }
 }
