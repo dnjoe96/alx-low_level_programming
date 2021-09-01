@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - cfinds and prints the first 98 Fibonacci numbers, starting with 1 and 2, 
- * followed by a new line.umputes first 5o fibonnaci number
+ * main - cfinds and prints the first 98 Fibonacci numbers,
+ * starting with 1 and 2, followed by a new line.
  *
  * Return: void
  */
