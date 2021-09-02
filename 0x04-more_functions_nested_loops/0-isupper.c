@@ -6,7 +6,7 @@
  * @c: letter to be tested
  * Return: 1 if c is upper case, 0 otherwise
  */
-int _isupper(int c).
+int _isupper(int c)
 {
 	if (c >= 97 && c <= 122)
 	{
