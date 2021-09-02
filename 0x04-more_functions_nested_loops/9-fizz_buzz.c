@@ -1,27 +1,26 @@
-#include "main.h"
-#include "holberton.h"
+#include <stdio.h>
 /**
- * print_square - print square
+ * main - print fizz buzz
  *
- * @n: dimension of square
  * Return: void
  */
-void print_square(int n)
+int main(void)
 {
 	int i;
-      char fizz[] = "Fizz";
-      char buzz[] = "Buzz";
-      
-      for (i = 0; i < 100; i++)
-      {
-          if (i % 3 == 0 && i % 5 != 0)
-                printf("%c ", fizz);
-          else if (i % 3 != 0 && i % 5 == 0)
-                printf("%c ", buzz);
-          else if (i % 3 == 0 && i % 5 == 0)
-                printf("%c ", strcat(fizz, buzz));
-          else
-                printf("%d ", i);
-      }
-        
+	char fizz[] = "Fizz";
+	char buzz[] = "Buzz";
+	char fizzbuzz[] = "FizzBuzz";
+
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0 && i % 5 != 0)
+			printf("%s ", fizz);
+		else if (i % 3 != 0 && i % 5 == 0)
+			printf("%s ", buzz);
+		else if (i % 3 == 0 && i % 5 == 0)
+			printf("%s ", fizzbuzz);
+		else
+			printf("%d ", i);
+	}
+	return (0);
 }
