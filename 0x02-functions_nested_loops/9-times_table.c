@@ -16,26 +16,26 @@ void times_table(void)
 		{
 			p = n * m;
 
-			if (p > 9)
+			if (m == 0)
+			{
+				_putchar('0' + p);
+			}
+			else if (p > 9 && m != 0)
 			{
 				i = p / 10;
 				j = p % 10;
 
+				_putchar(',');
+				_putchar(' ');
 				_putchar('0' + i);
 				_putchar('0' + j);
 			}
 			else
 			{
-				_putchar('0' + p);
-			}
-
-			if (p != 81 && m != 9)
-			{
 				_putchar(',');
 				_putchar(' ');
-
-				if (p <= 9)
-					_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + p);
 			}
 		}
 		_putchar('\n');
