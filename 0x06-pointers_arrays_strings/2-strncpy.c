@@ -10,12 +10,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, len;
-
-	len = 0;
-
-	while (*(dest + len) != '\0')
-		len++;
+	int i;
 
 	i = 0;
 
@@ -23,14 +18,13 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		if (*(dest + i) == '\0')
 		{
-			i++;
 			*(dest + i) = '\0';
 		}
 		else
 		{
 			*(dest + i) = *(src + i);
-			i++;
 		}
+		i++;
 	}
 
 	return (dest);
