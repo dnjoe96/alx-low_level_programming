@@ -1,24 +1,18 @@
 /**
- * factorial - Uses recursion to calculate factorial of a number.
- * @n: number to find factorial of.
+ * factorial - A function using recursion to calculate factorial of a number.
  *
- * Return: factorial of n (int)
+ * @n: number to find factorial.
+ *
+ * Return: factorial of n
  */
 int factorial(int n)
 {
-	int x;
-
 	if (n == 0)
-	{
 		return (1);
-	}
-	else if (n < 0)
-	{
+	if (n < 0)
 		return (-1);
-	}
-	else
-	{
-		x = n * factorial(n - 1);
-		return (x);
+	if (n == 1)
+		return (1);
+	return (n * factorial(n - 1));
 	}
 }
