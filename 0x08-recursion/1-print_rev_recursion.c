@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * _print_rev_recursion - Uses recursion to reverse a string.
- * @s: string to reverse
+ * _print_rev_recursion - A function using recursion to reverse a string.
+ * 
+ * @s: string input
  *
  * Return: Void
  */
