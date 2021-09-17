@@ -8,9 +8,8 @@
  * @argv: The input array
  * Return: int
  */
-int main(int argc, char *argv[])
+int main(int argc, __attribute__((unused)) char *argv[])
 {
-	argv = argv;
 	printf("%d\n", argc - 1);
 	return (0);
 }
