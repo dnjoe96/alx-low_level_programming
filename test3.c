@@ -7,26 +7,29 @@ char* convert(unsigned int, int); 		//Convert integer number into octal, hex, et
 
 int main() 
 { 
-	Myprintf(" WWW.F%cRMCO\nDES.COM %s %d\n", 'O', "Yeah", 9); 
+	Myprintf(" \tWWW.F%cRMCO\nDES.COM %s %d     t\n", 'O', "Yeah", 9); 
 	
 	return 0;
-} 
-
-void escape(char c)
-{
-	switch(c) 
-	{ 
-	case 'n':
-		putchar('\n');
-		break;
-	case 't':
-		puchar('\t');
-		break;
-	default:
-		break;
-	}	
 }
 
+
+void print_char(char c)
+{
+	putchar(c);
+}
+
+int print_str(char *s)
+{
+	if (s == NULL)
+		return (0);
+	
+	while(*s)
+	{
+		putchar(*s);
+		s++;
+	}
+	return (1);
+}
 void Myprintf(char* format,...) 
 { 
 	char *traverse;
@@ -37,16 +40,8 @@ void Myprintf(char* format,...)
 	
 	for(traverse = format; *traverse != '\0'; traverse++) 
 	{
-		if (*traverse == '\')
-		{
-			*traverse++;
-			escape(*traverse);
-			*traverse++;
-			
-		}
-		
 		while( *traverse != '%' ) 
-		{ 
+		{
 			putchar(*traverse);
 			traverse++; 
 		} 
@@ -56,35 +51,35 @@ void Myprintf(char* format,...)
 		//Module 2: Fetching and executing arguments
 		switch(*traverse) 
 		{ 
-			case 'c':
-	    			printf("%c", va_arg(list, int)); // print char
-	    			break;
-	    		case 'i':
-	    			printf("%i", va_arg(list, int)); // print integar
-	    			break;
-	    		case 'd':
-	    			printf("%d", va_arg(list, int)); // print integar
-	    			break;
-	    		case 'b':
-	    			// unsigned integar is converted to binary
-	    			break;
-	    		case 's':
-	    			printf("%s", va_arg(list, char*)); // print string
-	    			break;
-	    		case 'u':
-	    			printf("%d", va_arg(list, int)); // print unsigned integar
-	    			break;
-	    		case 'o':
-	    			printf("%d", va_arg(list, int)); // print integar octal
-	    			break;
-	    		case 'x':
-	    			printf("%d", va_arg(list, int)); // print hexa small letter
-	    			break;
-	    		case 'X':
-	    			printf("%d", va_arg(list, int)); // print hex capital letter
-	    			break;
-	    		default:
-	    			break;
+		case 'c':
+    			print_char(va_arg(list, int)); // print char
+    			break;
+    		case 'i':
+    			printf("%i", va_arg(list, int)); // print integar
+    			break;
+    		case 'd':
+    			printf("%d", va_arg(list, int)); // print integar
+    			break;
+    		case 'b':
+    			// unsigned integar is converted to binary
+    			break;
+    		case 's':
+    			print_str(va_arg(list, char*)); // print string
+    			break;
+    		case 'u':
+    			printf("%d", va_arg(list, int)); // print unsigned integar
+    			break;
+    		case 'o':
+    			printf("%d", va_arg(list, int)); // print integar octal
+    			break;
+    		case 'x':
+    			printf("%d", va_arg(list, int)); // print hexa small letter
+    			break;
+    		case 'X':
+    			printf("%d", va_arg(list, int)); // print hex capital letter
+    			break;
+    		default:
+    			break;
 		}	
 	} 
 	
