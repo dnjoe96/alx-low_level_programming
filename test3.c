@@ -1,13 +1,13 @@
 #include <stdio.h> 
 #include <stdarg.h>				
 
-void Myprintf(char *,...); 				//Our printf function
+int _printf(const char *,...); 				//Our printf function
 char* convert(unsigned int, int); 		//Convert integer number into octal, hex, etc.
 
 
 int main() 
 { 
-	Myprintf(" \tWWW.F%cRMCO\nDES.COM %s %d     t\n", 'O', "Yeah", 9); 
+	_printf(" \tWWW.F%cRMCO\nDES.COM %s %d     t\n", 'O', "Yeah", 9); 
 	
 	return 0;
 }
@@ -30,9 +30,9 @@ int print_str(char *s)
 	}
 	return (1);
 }
-void Myprintf(char* format,...) 
+int _printf(const char* format,...) 
 { 
-	char *traverse;
+	const char *traverse;
 	
 	//Module 1: Initializing Myprintf's arguments 
 	va_list list; 
@@ -42,10 +42,13 @@ void Myprintf(char* format,...)
 	{
 		while( *traverse != '%' ) 
 		{
+			if (*traverse == '\0')
+			{	
+				return (0);
+			}
 			putchar(*traverse);
 			traverse++; 
 		} 
-		
 		traverse++; 
 		
 		//Module 2: Fetching and executing arguments
@@ -84,7 +87,9 @@ void Myprintf(char* format,...)
 	} 
 	
 	//Module 3: Closing argument list to necessary clean-up
-	va_end(list); 
+	va_end(list);
+
+	return (0);	
 } 
 
 char *convert(unsigned int num, int base) 
