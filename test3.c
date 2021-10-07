@@ -7,11 +7,45 @@ char* convert(unsigned int, int); 		//Convert integer number into octal, hex, et
 
 int main() 
 { 
-	_printf(" \tWWW.F%cRMCO\nDES.COM %s %d     t\n", 'O', "Yeah", 9); 
+	//_printf(" \tWWW.F%cRMCO\nDES.COM %s %d     t\n", 'O', "Yeah", 9);
+	//_printf("hello world and %d\n", 9); 
+	_printf("Negative:[%d]\n", -762534);
+    	printf("Negative:[%d]\n", -762534);
 	
 	return 0;
 }
 
+int print_d(int a)
+{
+	unsigned int aux_Num, count_Zero;
+
+	if (a < 0)
+	{
+		a = a * -1; // trial
+		putchar(45); // trial
+	}
+	
+	
+	aux_Num = a; // trial
+	count_Zero = 1;
+	//printf("First while\n");
+	while (aux_Num > 9)
+	{
+		aux_Num /= 10;
+		count_Zero *= 10;
+		
+		//printf("auxNum = %d, count_Zero = %d\n", aux_Num, count_Zero);
+	}
+
+
+	while (count_Zero >= 1)
+	{
+		putchar(((a / count_Zero) % 10) + '0'); // trialS
+		count_Zero /= 10;
+		//printf("Inside: %d, count_Zero = %d\n", (a / count_Zero) % 10, count_Zero);
+	}
+	return (0);
+}
 
 void print_char(char c)
 {
@@ -58,10 +92,10 @@ int _printf(const char* format,...)
     			print_char(va_arg(list, int)); // print char
     			break;
     		case 'i':
-    			printf("%i", va_arg(list, int)); // print integar
+    			print_d(va_arg(list, int)); // print integar
     			break;
     		case 'd':
-    			printf("%d", va_arg(list, int)); // print integar
+    			print_d(va_arg(list, int)); // print integar
     			break;
     		case 'b':
     			// unsigned integar is converted to binary

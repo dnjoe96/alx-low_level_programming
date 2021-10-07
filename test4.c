@@ -2,7 +2,7 @@
 
 int print_d(int a)
 {
-	unsigned int num_abs, aux_Num, count_Zero;
+	unsigned int aux_Num, count_Zero;
 
 	if (a < 0)
 	{
@@ -22,7 +22,7 @@ int print_d(int a)
 		//printf("auxNum = %d, count_Zero = %d\n", aux_Num, count_Zero);
 	}
 
-	printf("Second while\n");
+
 	while (count_Zero >= 1)
 	{
 		putchar(((a / count_Zero) % 10) + '0'); // trialS
@@ -34,8 +34,8 @@ int print_d(int a)
 
 int main(void)
 {
-    int num = 233533443;
-    print_d(num);
+    //int num = 233533443;
+    print_d(-762534);
     
     return 0;
 }
