@@ -15,7 +15,7 @@ size_t print_listint(const listint_t *h)
 	new = malloc(sizeof(listint_t));
 
 	if (new == NULL)
-		return (-1);
+		return (NULL);
 
 	for (i = 0; node != NULL; i++)
 	{
