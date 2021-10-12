@@ -1,26 +1,22 @@
 #include "lists.h"
 
 /**
- * listint_len - get the number of elements in a linked list
+ * free_listint - free the listint_t list
  *
- * @h: Pointer to the head of the list
- * Return: Number of nodes
+ * @head: Pointer to the head of the list
+ * Return: void
  */
-size_t listint_len(const listint_t *h)
+void free_listint(listint_t *head)
 {
 	int i;
-	listint_t *new;
-	const listint_t *node = h;
+	listint_t *hold, *node;
 
-	new = malloc(sizeof(listint_t));
-
-	if (new == NULL)
-		return (NULL);
+	node = head;
 
 	for (i = 0; node != NULL; i++)
 	{
-		node = node->next;
+		hold = node->next;
+		free(node);
+		node = hold;
 	}
-	free(new);
-	return (i);
 }
