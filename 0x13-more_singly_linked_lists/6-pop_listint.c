@@ -13,12 +13,12 @@ int pop_listint(listint_t **head)
 
 	node = *head;
 
-	if (node->next == NULL)
+	if (node == NULL)
 		return (0);
 	
 	data = node->n;
 	*head = node->next;
-	free(node->next);
+	free(node);
 
 	return (data);
 }
