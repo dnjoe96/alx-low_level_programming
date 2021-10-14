@@ -1,31 +1,29 @@
 #include "main.h"
 
 /**
- * binary_to_uint -  converts a binary number to an unsigned int
+ * print_binary - Print binary numbers
  *
- * @b: b is pointing to a string of 0 and 1 chars
- * Return: the converted number
+ * @n: Integar  numbers
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
-    unsigned long int count, i, count_Zero, aux_Num;
+	unsigned long int count, i, aux_Num;
 
-	count = 0;
-	
 	aux_Num = n;
-	count_Zero = 1;
+	count = 1;
 
 	while (aux_Num > 1)
 	{
 		aux_Num /= 2;
-		count_Zero *= 2;
+		count *= 2;
 	}
 
-	while (count_Zero >= 1)
+	while (count >= 1)
 	{
-		i = ((n / count_Zero) % 2) + 48;
-		putchar(i);
-		count_Zero /= 2;
+		i = ((n / count) % 2) + 48;
+		_putchar(i);
+		count /= 2;
 	}
 
 }
