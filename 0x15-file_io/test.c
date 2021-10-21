@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <elf.h>
 #include <fcntl.h>
@@ -32,9 +33,9 @@ int main(int argc, const char *argv[])
                 return (0);
         }
 
-        count_r = read(argv[1], buffer, letters);
+        read(fd, buffer, letters);
 
-	write(STDIN_FILENO, count_r, 100);
+	write(STDIN_FILENO, buffer, strlen(buffer));
 
 	return (0);
 }
