@@ -23,7 +23,7 @@ int main(int *argv, char *arg[])
 		exit(1);
 	}
 
-	while (strcmp(str, "exit") != 0)
+	while (1)
 	{
 		count++;
 
@@ -40,7 +40,9 @@ int main(int *argv, char *arg[])
 			exit(1);
 		}
 		str[strlen(str) - 1] = '\0'; // Usually, because str will include new line char, i am stting the last char to \0 to terminate the string.
-		
+			
+		if (strcmp(str, "exit") == 0)
+				exit(0);
 		/**
 		 * working with strtok function - char *strtok(char *str, const char *delim)
 		 * 
