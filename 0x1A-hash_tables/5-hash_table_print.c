@@ -21,28 +21,30 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	for (index = 0; index < size; index++)
 	{
-		/*printf("index = %lu, size = %lu\n", index, size);*/
 		node = *(array + index);
-		/*printf("inside for loop\n");*/
+		
 		if (node == NULL)
 		{
-			/*printf("To continue\n");*/
 			continue;
 		}
 
-		if (count != 0)
+		/*if (count != 0)
 			printf(", ");
-		/*printf("address = %p", (void *)node);*/
-
+		*/
 		while (node != NULL)
 		{
-			printf("'%s': '%s'", node->key, node->value);
+			if (count != 0)
+				printf(", ");
+
+			if (node->value)
+			{
+				printf("'%s': '%s'", node->key, node->value);
+			}
 			node = node->next;
+			count++;
 		}
 
 		/*printf("'%s': '%s'", "key", "value");*/
-
-		count++;
 	}
 
 	printf("}\n");
