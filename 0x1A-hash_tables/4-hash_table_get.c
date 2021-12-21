@@ -44,11 +44,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	hash_node_t *node;
 	unsigned long int index;
-	unsigned long int size = ht->size;
-	hash_node_t **array = ht->array;
+	unsigned long int size;
+	hash_node_t **array;
 
 	if (ht == NULL)
 		return (NULL);
+	
+	size = ht->size;
+	array = ht->array;
 
 	index = key_index((const unsigned char *)key, size);
 
