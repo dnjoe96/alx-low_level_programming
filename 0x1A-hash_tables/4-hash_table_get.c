@@ -47,6 +47,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int size = ht->size;
 	hash_node_t **array = ht->array;
 
+	if (ht == NULL)
+		return (NULL);
+
 	index = key_index((const unsigned char *)key, size);
 
 	node = find(array, index, key);
