@@ -1,5 +1,11 @@
 #include "hash_tables.h"
 
+/**
+ * hash_table_print - print hash table
+ *
+ * @ht: Pointer to hash table
+ * Return:  void
+ */
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int index, size = ht->size;
@@ -30,7 +36,7 @@ void hash_table_print(const hash_table_t *ht)
 		}
 
 		/*printf("'%s': '%s'", "key", "value");*/
-		
+
 		count++;
 	}
 
