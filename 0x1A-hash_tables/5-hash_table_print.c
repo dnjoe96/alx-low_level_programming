@@ -23,8 +23,11 @@ void hash_table_print(const hash_table_t *ht)
 			printf(", ");
 		/*printf("address = %p", (void *)node);*/
 
-		if (node->key || node->value)
+		while (node != NULL)
+		{
 			printf("'%s': '%s'", node->key, node->value);
+			node = node->next;
+		}
 
 		/*printf("'%s': '%s'", "key", "value");*/
 		
