@@ -20,7 +20,7 @@ int insert(hash_node_t **array, unsigned long index, hash_node_t *node)
 	else
 	{
 		head = array[index];
-		
+
 		if (head->next == NULL)
 		{
 			if (strcmp(head->key, node->key) == 0)
@@ -29,7 +29,7 @@ int insert(hash_node_t **array, unsigned long index, hash_node_t *node)
 				free(node);
 				return (1);
 			}
-			
+
 			head->next = node;
 			return (1);
 		}
@@ -42,10 +42,10 @@ int insert(hash_node_t **array, unsigned long index, hash_node_t *node)
 				free(node);
 				return (1);
 			}
-			
+
 			head = head->next;
 		}
-		
+
 		head->next = node;
 
 		return (1);

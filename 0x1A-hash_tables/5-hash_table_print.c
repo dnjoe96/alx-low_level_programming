@@ -22,15 +22,12 @@ void hash_table_print(const hash_table_t *ht)
 	for (index = 0; index < size; index++)
 	{
 		node = *(array + index);
-		
+
 		if (node == NULL)
 		{
 			continue;
 		}
 
-		/*if (count != 0)
-			printf(", ");
-		*/
 		while (node != NULL)
 		{
 			if (count != 0)
@@ -44,7 +41,6 @@ void hash_table_print(const hash_table_t *ht)
 			count++;
 		}
 
-		/*printf("'%s': '%s'", "key", "value");*/
 	}
 
 	printf("}\n");

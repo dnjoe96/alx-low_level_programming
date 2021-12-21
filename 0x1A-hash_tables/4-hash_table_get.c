@@ -49,7 +49,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (ht == NULL)
 		return (NULL);
-	
+
 	size = ht->size;
 	array = ht->array;
 
